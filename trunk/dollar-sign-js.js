@@ -26,7 +26,41 @@ $js = {
 		//$js.cache.runFunctions();
 		
 		$js.isReady = true;
+	},
+	
+	/**
+	 * The Dom (Document Object Model) object
+	 * This will handel everything related to the DOM
+	 * anything with elements goes here.
+	 */
+	dom: {
+		
+	},
+	
+	// Cross browser event handling
+	events: {
+	
+	},
+	
+	// Cross browser form handling
+	forms: {
+	
 	}
+	
+	// Cross browser logging support
+	log: function (msg) {
+		
+	}
+	
+	// Serializing
+	serialize: {
+	
+	},
+	
+	// Cross browser resource fetching
+	xhr: {
+	
+	},
 		
 };
 
