@@ -8,6 +8,15 @@
 $js = {
 	i: 0,
 	k: 0,
+	
+	/**
+	 * mode - What mode you're wanting to work with
+	 * experimental things will break and not always
+	 * work!
+	 *  - experimental
+	 *  - user
+	 */
+	mode: 'experimental',
 
 	// This is a [manual] cache system, which can be used 
 	cache: {
@@ -28,39 +37,71 @@ $js = {
 		$js.isReady = true;
 	},
 	
+	// Array foreach
+	
+	// Browser Detection
+	
+	// Canvas Handling
+	
+	// Cookie Handling
+	
 	/**
 	 * The Dom (Document Object Model) object
 	 * This will handel everything related to the DOM
 	 * anything with elements goes here.
 	 */
-	dom: {
-		
-	},
+	
+	// Device API
+	
+	// Encrypting
 	
 	// Cross browser event handling
-	events: {
 	
-	},
+	// File API
 	
 	// Cross browser form handling
-	forms: {
 	
-	}
+	// Hashing
+	
+	// JSON parsing
 	
 	// Cross browser logging support
 	log: function (msg) {
-		
+		if (console !== undefined) {
+			console.log(msg);
+		} else if (dump !== undefined) {
+			dump('>>>' + msg + '\n');
+		} else {
+			if ($js.mode === 'experimental') {
+				alert(msg);
+			} else {
+				// Append an element onto the bottom of the page
+				// and hope that the user can read the message.
+				// Oh, the element should be hidden (or use a 
+				// optioned style).
+			}
+		} 
+			
 	}
 	
-	// Serializing
-	serialize: {
+	// Time (managment / parsing / converting)
 	
-	},
+	// Sandboxing / Workers
+	
+	// Serializing
+	
+	// Support (is there support for XMLHttpRequest...)
+	
+	// Storage (Local/Session)
+	
+	// Cross browser string support
 	
 	// Cross browser resource fetching
-	xhr: {
+	xhr: function (url, options) {
 	
-	},
+	}
+	
+	// XML parsing
 		
 };
 

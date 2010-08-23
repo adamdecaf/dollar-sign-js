@@ -1,0 +1,73 @@
+Dollar Sign JavaScript
+
+Dom
+ Create, edit, delete, copy,
+ $js.editElm({
+      "id": "nav",
+      "text": "hi!",
+      "html": "<strong>Hi!</strong>"
+      "onmouseover": function () {
+           this.style.color = "#EEEEEE";
+      }
+  }
+
+Array.prototype.forEach = function (fn) {
+   for (var i = 0; i < this.length; i++) {
+     fn(this[i]);
+   }
+};
+
+$js.xhr("http://ashannon.us ", {
+   "get": "?id=8364",
+   "post": "id=8364",
+   "headers": Bool,
+   "user-agent": "Lynx"
+   "timeout": 30,
+});
+
+$js.addEvent("load", Object, fn);
+
+console.log($js.browser);
+ >>> iPod touch
+console.log($is.browserVersion);
+ >>> webkit r37361
+
+var output = $js.sandbox("popular-tweets.js");
+
+$js.sandbox = function (script) {
+  var script = $js.xhr(script);
+  // validate for mime types, valid code, .js.....
+  if (Worker) {
+     var playground = new Worker(script);
+           playground.onmessage = function (msg) {
+                return msg;
+           };
+  } else {
+      // strip away the Worker stuff and execute the code in an iframe away from the page.
+     // (test to see if you even need to append it to a page to get a return)
+  }
+};
+
+$js.getElm = function (identifier) {
+    switch (true) {
+        case /^<([a-z]+)>$/.test(identifier):
+        case /^#{1}([a-z]+)$/:
+        case /^\.{1}([a-z]+)$/:
+        case /\s/:
+           // remember to check for support and if none break down the request by spaces
+           // and proceed on former block with the current.
+           return document.querySelector();
+    }
+};
+
+$js.md5(), $js.sha512, $js.aes()
+$js.baseConvert(str, from, to);
+
+Element.prototype.innerText = function () {}
+Element.prototype.editable = Bool
+If (Element.prototype.contentEditable === undefined) {
+   Element.prototype.contentEditable = function () {
+     // onclick record keystrokes and edit HTML & text on each stroke.
+   }
+}
+

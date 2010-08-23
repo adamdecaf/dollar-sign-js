@@ -1,0 +1,99 @@
+Load small script which checks to see if a specific part is loaded.
+ - Keeps sizes small
+ - Slower than one file
+
+// Structure
+$js = {
+  'dom',
+  'effects',
+  'listen',
+  '...',
+};
+
+// Setup a cache for objects, strings, functions
+// setup a queue for functions to run (.ready([loadImgs(), showImgs()]), or allow user generated ones)
+
+// The DOM ready check for Internet Explorer
+function doScrollCheck() {
+	if ( jQuery.isReady ) {
+		return;
+	}
+
+	try {
+		// If IE is used, use the trick by Diego Perini
+		// http://javascript.nwbox.com/IEContentLoaded/
+		document.documentElement.doScroll("left");
+	} catch(e) {
+		setTimeout( doScrollCheck, 1 );
+		return;
+	}
+
+	// and execute any waiting functions
+	jQuery.ready();
+}
+
+// Features
+Dom [
+ find easily ( $js.dom.get([<a>, #nav, .options, #nav .button]); )
+ create elemnts,
+ manage [
+  css, js, edit html, class, id's
+ ]
+ // Add / Remove functions also
+ toggle [
+   // Pass an object of the attribute to toggle
+   class, id, attributes (style, data-*)
+ ]
+]
+
+Effects [
+
+]
+
+XHR [
+  // $js.xhr(String address, Object options);
+  // $js.xhr('http://ashannon.us', {});
+  // options {
+  //    'type': [get, post, delete],
+  //    'content-type': String, (text/plain),
+  //    'user-agent': 'Lynx 2.031',
+  //    'headers': [['joke', 'knock knock'], ['', '']],
+  // }
+
+]
+
+Data (html data-*) [
+  // Scan all elements on first call
+]
+
+Forms [
+  // Create, validate
+]
+
+Serialize [
+  // Clean data
+  // Remove [html, tags (specific ones), run a regex through]
+]
+
+Logging [
+  // Log errors to [console, file, alert]
+]
+
+Strings [
+  // split, replace, trim (r and l), match
+]
+
+Local / Session Storage
+Cookies
+File API
+Device API
+Canvas API
+Encrypt (aes, blowfish)
+Hash (md5, sha1, sha256...)
+Get browser
+Retrun support for <something>
+parse [json, xml]
+create workers (and "secure" sandboxes) to eval scripts in and return result
+foreach
+grep
+time (format, get, parse, convert, compare)
