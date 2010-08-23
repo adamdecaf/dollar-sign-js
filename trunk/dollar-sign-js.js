@@ -82,7 +82,7 @@ $js = {
 			}
 		} 
 			
-	}
+	},
 	
 	// Time (managment / parsing / converting)
 	
