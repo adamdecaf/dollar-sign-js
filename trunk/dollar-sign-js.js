@@ -15,36 +15,10 @@
 	// Element additions
 	HTMLElement.prototype.innerText = function (newText) {
 		if (newText !== undefined)
-			this.innerHTML = document.createTextNode(untrusted_string);
+			this.innerHTML = document.createTextNode(newText);
 		else
 			return this.innerHTML;
-	}
-	
-	// Make all elements editable by default (even if it's not supported by the browser).
-	HTMLElement.prototype.editable = true;
-	
-	if (Element.prototype.contentEditable === undefined) {
-		Element.prototype.onmousedown = (function (elm) {
-			// Change the element to a textarea the same dimensions
-			var textarea = document.createElement('textarea');
-				textarea.style.height = elm.style.height || '250px';
-				textarea.style.width  = elm.style.width  || '500px';
-				textarea.value = elm.innerHTML.replace('<br />', '\n');
-				
-			// Take the elements after the element
-			elm.thisIsAMarker = true;
-			var 
-				elmsBefore = [],
-				elmsAfter = [];
-				
-			for (i = 0; i < elm.parent.childNodes.length; i++) {
-				elmsBefore[i] = elm.parent.childNodes(i);
-			}
-			
-				console.log(elmsBefore);
-				
-		})(this);
-	}
+	};
 	
 // Now for $js
 (function () {
@@ -147,10 +121,11 @@ $js = {
 		
 };
 
-// Append the $js object on at the end.
-window.$js = $js;
+	// Append the $js object on at the end.
+	window.$js = $js;
 
-window.onload = function () {
-	$js.ready();	
-}
+	window.onload = function () {
+		$js.ready();	
+	}
+
 })();
