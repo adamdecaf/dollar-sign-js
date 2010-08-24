@@ -3,12 +3,69 @@
 <head>
 	<title>Dollar Sign JavaScript -- Tests</title>
 	<meta charset="utf-8" />
+	
+	<style>
+		li {
+			border-bottom: 1px solid #000000;
+			padding-bottom: 10px;
+			width: 50%;
+		}
+		
+			li h4 {
+				margin-bottom: 3px;
+				padding-bottom: 0px;	
+			}
+	</style>
 </head>
 <body>
 	
 	<header>
 		<h3>Dollar Sign JavaScript -- Tests</h3>
 	</header>
+	
+	<section id="tests">
+	<!--
+			<li>
+				<h4></h4>
+			</li>
+	-->
+		
+		<ul>
+			<li>
+				<h4>Logging Statements</h4>
+				Message to Log: <input type="text" id="logging" />
+					<input type="button" onclick="$js.log(document.getElementById('logging').value);" value="Log" />
+			</li>
+			
+			<!--
+			<li>
+				<h4>contentEditable</h4>
+					<p style="border: 1px solid #000000;">
+						Edit me!!!
+						<br /><br />
+						Edit me!!!
+					</p>
+			</li>
+			-->
+			
+			<li>
+				<h4>Array.forEach()</h4>
+				<input type="button" value="Try It!" onclick="arr.forEach(function (text) { alert(text); });" />
+				<script>
+					var arr = ['a','b','c','d','e'];	
+				</script>
+			</li>
+			
+			<li>
+				<h4>HTMLElement.innerText</h4>
+					a&lt;script&gt;alert('hi');&lt;/script&gt;b ==> <span id="innerText"></span>
+					
+					<script>
+						document.getElementById('innerText').innerText = "a<script>alert('hi');<\/script>b";
+					</script>
+			</li>
+		</ul>
+	</section>
 	
 <script src="../trunk/dollar-sign-js.js"></script>
 </body>
