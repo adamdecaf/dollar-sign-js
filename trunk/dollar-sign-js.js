@@ -3,6 +3,16 @@
  * Adam Shannon
  * 2010-08-22
  */
+
+// Extra features that come for just using this script!!
+	// Array foreach
+	Array.prototype.forEach = function (fn) {
+	   for (var i = 0; i < this.length; i++) {
+		 fn(this[i]);
+	   }
+	};
+	
+// Now for $js!
 (function () {
 
 $js = {
@@ -36,13 +46,6 @@ $js = {
 		
 		$js.isReady = true;
 	},
-	
-	// Array foreach
-	Array.prototype.forEach = function (fn) {
-	   for (var i = 0; i < this.length; i++) {
-		 fn(this[i]);
-	   }
-	};
 
 	// Browser Detection
 	
