@@ -38,7 +38,12 @@ $js = {
 	},
 	
 	// Array foreach
-	
+	Array.prototype.forEach = function (fn) {
+	   for (var i = 0; i < this.length; i++) {
+		 fn(this[i]);
+	   }
+	};
+
 	// Browser Detection
 	
 	// Canvas Handling
@@ -55,17 +60,17 @@ $js = {
 	
 	// Encrypting
 	
-	// Cross browser event handling
+	// Event handling
 	
 	// File API
 	
-	// Cross browser form handling
+	// Form handling
 	
 	// Hashing
 	
 	// JSON parsing
 	
-	// Cross browser logging support
+	// Logging support
 	log: function (msg) {
 		if (console !== undefined) {
 			console.log(msg);
@@ -94,9 +99,9 @@ $js = {
 	
 	// Storage (Local/Session)
 	
-	// Cross browser string support
+	// String support
 	
-	// Cross browser resource fetching
+	// XMLHttpRequest()
 	xhr: function (url, options) {
 	
 	}
