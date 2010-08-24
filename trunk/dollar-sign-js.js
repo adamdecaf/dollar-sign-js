@@ -11,6 +11,14 @@
 		 fn(this[i]);
 	   }
 	};
+
+	// Element additions
+	HTMLElement.prototype.innerText = function (newText) {
+		if (newText !== undefined)
+			this.innerHTML = document.createTextNode(untrusted_string);
+		else
+			return this.innerHTML;
+	}
 	
 // Now for $js!
 (function () {
