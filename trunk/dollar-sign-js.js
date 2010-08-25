@@ -3,6 +3,9 @@
  * Adam Shannon
  * 2010-08-22
  */
+ 
+// Debating on using this
+// "use strict";
 
 // Extra features that come for just using this script!!
 	// Array forEach()
