@@ -25,13 +25,13 @@ var k = k || 0;
 	
 	// Array only()
 	// Run a function on elements whose value returns True on Expression
-	Array.prototype.only = function (Expression, ifTrue) {
-		this.foreach(function (value) {
-			if (Expression(value) === true) {
-				ifTrue(value);
-			}
-		});
-	};
+	//Array.prototype.only = function (Expression, ifTrue) {
+	//	this.foreach(function (value) {
+	//		if (Expression(value) === true) {
+	//			ifTrue(value);
+	//		}
+	//	});
+	//};
 	
 	// Date now()
 	Date.prototype.now = function () {
