@@ -5,11 +5,20 @@
  */
 
 // Extra features that come for just using this script!!
-	// Array foreach
+	// Array forEach()
 	Array.prototype.forEach = function (fn) {
 	   for (var i = 0; i < this.length; i++) {
 		 fn(this[i]);
 	   }
+	};
+	
+	// Array only()
+	// Run a function on elements whose value returns True on Expression
+	Array.prototype.only = function (Expression, ifTrue) {
+		this.foreach(function (value) {
+			if (Expression(value) === true)
+				ifTrue(value);
+		});
 	};
 
 	// Element additions
