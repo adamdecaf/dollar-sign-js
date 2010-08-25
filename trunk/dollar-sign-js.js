@@ -7,6 +7,10 @@
 // Debating on using this
 // "use strict";
 
+// Define some loop counter variables.
+var i = i || 0;
+var k = k || 0;
+
 // Extra features that come for just using this script!!
 	// Array forEach()
 	Array.prototype.forEach = function (fn) {
@@ -23,8 +27,9 @@
 	// Run a function on elements whose value returns True on Expression
 	Array.prototype.only = function (Expression, ifTrue) {
 		this.foreach(function (value) {
-			if (Expression(value) === true)
+			if (Expression(value) === true) {
 				ifTrue(value);
+			}
 		});
 	};
 	
@@ -35,10 +40,11 @@
 
 	// Element additions
 	HTMLElement.prototype.innerText = function (newText) {
-		if (newText !== undefined)
+		if (newText !== undefined) {
 			this.innerHTML = document.createTextNode(newText);
-		else
+		} else {
 			return this.innerHTML;
+		}
 	};
 	
 	// String rtrim()
@@ -50,9 +56,7 @@
 // Now for $js
 (function () {
 
-$js = {
-	i: 0,
-	k: 0,
+var $js = {
 	
 	/**
 	 * mode - What mode you're wanting to work with
@@ -153,6 +157,6 @@ $js = {
 
 	window.onload = function () {
 		$js.ready();	
-	}
+	};
 
 })();
