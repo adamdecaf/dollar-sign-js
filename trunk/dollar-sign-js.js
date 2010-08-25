@@ -12,6 +12,10 @@
 	   }
 	};
 	
+	// Array indexOf()
+	
+	// Array lastIndexOf()
+	
 	// Array only()
 	// Run a function on elements whose value returns True on Expression
 	Array.prototype.only = function (Expression, ifTrue) {
@@ -28,6 +32,8 @@
 		else
 			return this.innerHTML;
 	};
+	
+	// String trim()
 	
 // Now for $js
 (function () {
