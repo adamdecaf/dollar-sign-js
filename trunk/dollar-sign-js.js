@@ -41,6 +41,10 @@
 			return this.innerHTML;
 	};
 	
+	// String rtrim()
+	
+	// String ltrim()
+	
 	// String trim()
 	
 // Now for $js
