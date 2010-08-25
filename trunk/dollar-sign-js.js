@@ -24,6 +24,11 @@
 				ifTrue(value);
 		});
 	};
+	
+	// Date now()
+	Date.prototype.now = function () {
+		return (new Date()).getTime();
+	};
 
 	// Element additions
 	HTMLElement.prototype.innerText = function (newText) {
