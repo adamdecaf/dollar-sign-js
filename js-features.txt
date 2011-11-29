@@ -2,6 +2,21 @@ Load small script which checks to see if a specific part is loaded.
  - Keeps sizes small
  - Slower than one file
 
+// Things to do.
+document.createElement() of section, article, header, footer, aside, hgroup,
+	nav, figure, figcaption, video, audio, mark, progress, meter, time, ruby, 
+	rt, rb, wbr, canvas, details, datalist, keygen, output
+	
+Support @placeholder on: input, textarea
+Support @autofocus on: input, textarea
+Support @required
+Support @min, @max, @pattern
+document.(activeElement|hasFocus)
+innerText
+document.(getElementsByClassName|getSelection)
+
+
+
 // Structure
 $js = {
   'dom',

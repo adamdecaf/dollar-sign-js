@@ -48,10 +48,20 @@ var k = k || 0;
 	};
 	
 	// String rtrim()
+	String.prototype.rtrim = function () {
+		return this.replace(/(\s|\u00A0)+$/g, '');
+	};
 	
 	// String ltrim()
+	String.prototype.ltrim = function () {
+		return this.replace(/^(\s|\u00A0)+/, '');
+	};
 	
 	// String trim()
+	String.prototype.trim = function () {
+		//return this.rtrim().ltrim();
+		return this.replace(/^(\s|\u00A0)+|(\s|\u00A0)+$/g, "");
+	};
 	
 // Now for $js
 (function () {

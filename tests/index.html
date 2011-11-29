@@ -1,6 +1,9 @@
 <!doctype html>
 <html>
 <head>
+	<!-- TERRIBLE PRACTICE TO PUT SCRIPTS IN THE HEAD!! -->
+	<script src="../trunk/dollar-sign-js.js"></script>
+	
 	<title>Dollar Sign JavaScript -- Tests</title>
 	<meta charset="utf-8" />
 	
@@ -49,10 +52,41 @@
 			-->
 			
 			<li>
-				<h4>Array.forEach()</h4>
+				<h4>Array.forEach(Function fn)</h4>
 				<input type="button" value="Try It!" onclick="arr.forEach(function (text) { alert(text); });" />
 				<script>
 					var arr = ['a','b','c','d','e'];	
+				</script>
+			</li>
+			
+			<!--
+			<li>
+				<h4>Array.only(Function expression, Function ifTrue)</h4>
+				<p>
+					Only perform ifTrue(Array[i]) when expression(Array[i]) === true.
+				</p>
+				<input type="button" onclick="tryArrayOnly();" value="Try it!" />
+				<output id="tryArrayOnly"></output>
+				<script>
+				(function () {
+					var elm = document.getElementById('tryArrayOnly');
+					var arr = [1,5.4,6,9,6,1,4,5,3,7,4,6,2];
+					
+					arr.only(function (value) { value == 6;}, function (value) { output.innerHTML += "<br />" + value; });
+				})();
+				</script>
+			</li>
+			-->
+			
+			<li>
+				<h4>Date.now()</h4>
+				<p>
+					The unix time is: <span id="unix-time"></span>
+				</p>
+				<script>
+				var date_now = window.setInterval(function () {
+					document.getElementById('unix-time').innerText = Date.now();
+				}, 1000);
 				</script>
 			</li>
 			
@@ -64,9 +98,30 @@
 						document.getElementById('innerText').innerText = "a<script>alert('hi');<\/script>b";
 					</script>
 			</li>
+			
+			<li>
+				<h4>String Trimming</h4>
+				<p>
+					Left: <span id="trim-left"></span><br />
+					Rigth: <span id="trim-right"></span><br />
+					Both: <span id="trim-both"></span>
+				</p>
+				
+				<script>
+				(function () {
+					var
+						left = document.getElementById('trim-left'),
+						right = document.getElementById('trim-right'),
+						both = document.getElementById('trim-both');
+					var str = "\'   a   \'";
+						
+					left.innerText = str + ' => ' + str.ltrim();
+					right.innerText = str + ' => ' + str.rtrim();
+					both.innerText = str + ' => ' + str.trim();
+				})();
+				</script>
+			</li>
 		</ul>
 	</section>
-	
-<script src="../trunk/dollar-sign-js.js"></script>
 </body>
 </html>
